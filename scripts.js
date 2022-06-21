@@ -1,5 +1,5 @@
 //addEventListener metodo eventDelegation
-const container = document.querySelector('.container')
+/* const container = document.querySelector('.container')
 const span = document.getElementById('span')
 let contador = 0
 
@@ -26,7 +26,7 @@ btn.addEventListener('click', (e) => {
   console.log('click boton')
   e.stopPropagation()
 })
-bgSuccess.addEventListener('click', () =>{console.log('click bgSuccess')})
+bgSuccess.addEventListener('click', () =>{console.log('click bgSuccess')}) */
 
 //addEventListener metodo accediendo a los selectores
 /* const btnAumentar = document.querySelector('.btn-info')
