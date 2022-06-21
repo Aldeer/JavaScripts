@@ -1,5 +1,46 @@
-//addEventListener
+//addEventListener metodo eventDelegation
+const container = document.querySelector('.container')
+const span = document.getElementById('span')
+let contador = 0
 
+container.addEventListener('click', e => {
+  if(e.target.classList.contains('btn-info')){
+    contador++
+    span.textContent = contador
+  }
+  if(e.target.classList.contains('btn-danger')){
+    contador--
+    span.textContent = contador
+  }
+  e.stopPropagation()
+})
+
+document.body.addEventListener('click', () => {
+  console.log('diste click')
+})
+
+const btn = document.querySelector('.btn-dark')
+const bgSuccess = document.querySelector('.bg-success')
+
+btn.addEventListener('click', (e) => {
+  console.log('click boton')
+  e.stopPropagation()
+})
+bgSuccess.addEventListener('click', () =>{console.log('click bgSuccess')})
+
+//addEventListener metodo accediendo a los selectores
+/* const btnAumentar = document.querySelector('.btn-info')
+const span = document.getElementById('span')
+let contador = 0
+btnAumentar.addEventListener('click', () => {
+  contador++
+  span.textContent = contador
+})
+const btnDisminuir = document.querySelector('.btn-danger')
+btnDisminuir.addEventListener('click', () => {
+  contador--
+  span.textContent = contador
+}) */
 //forma optima y correcta de crear elementos en mi html
 /* const lista = document.getElementById('lista')
 const template = document.querySelector('#template-li').content
